@@ -1,0 +1,123 @@
+@import url('./font-face.css');
+
+:root {
+    --main-color: #05826F;
+    --main-color-light:#05907B;
+    --main-color-dark:#11594E;
+    
+    --second-color:#655A57;
+    --second-color-light:#8D807C;
+    --second-color-dark:#463E3C;
+
+    --grey-color:#808080;
+    --grey-light:#A0A0A0;
+    --grey-color-dark:#404040;
+
+    --text-black:#202020;
+    --text-white:#FFFFFF;
+
+    --content-margin: 50px;
+    --border-radius: 2px
+}
+
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--text-black);
+    min-width: 900px;
+    font-family: 'DIN Pro', 'Source Han Sans';
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: var(--second-color-dark);
+    color: white;
+}
+.header-container {
+    position: relative;
+    box-sizing:border-box;
+    height: 100%;
+    margin: 0 var(--content-margin) 0;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+}
+.logo {
+    width: 120px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.topnav {
+    display: flex;
+    font-size: 16px;
+}
+.topnav li {
+    padding: 0 8px 0;
+}
+.topnav li a{
+    color: white;
+    text-decoration: none;
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+.banner-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    margin: 0 var(--content-margin) 0;
+}
+.banner-title {
+    font-size: 50px;
+    font-weight: 500;
+}
+.search-bar {
+    width: 250px;
+    height: 35px;
+    background-color: #FFFFFFA0;
+    padding: 0 5px 0;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.search-bar-input {
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    font-size: 16px;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    color: var(--second-color-dark);
+}
+.search-bar-input::placeholder {
+    color: var(--second-color-light);
+}
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+input {
+    font-family: 'DIN Pro', 'Source Han Sans';
+}
