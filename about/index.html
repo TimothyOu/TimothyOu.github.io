@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="./layout.css">
+    <title>TimothyOu</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-container">
+            <div class="logo">TimothyOu</div>
+            <ul class="topnav">
+                <li><a href="../">主页</a></li>
+                <li><a href="../creation/">创作</a></li>
+                <li><a href="../notes/">笔记</a></li>
+                <li><a href="../something/">事记</a></li>
+                <li><a href="../photos/">相册</a></li>
+                <li class="focus"><a href="#">关于</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="banner-container">
+            <div class="banner-title">关于</div>
+            <div class="search-bar">
+                <input class="search-bar-input" type="text" placeholder="搜索"/>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <section>
+            <h2>关于作业</h2>
+            <p>本网页为郑州大学选修课《网页设计与网站建设》的一份作业，目前共5个栏目，7个页面(没时间做第8个页面了……)</p>
+            <p>作业中运用了课堂中的大部分知识点。但也运用了一些课堂上没讲过的知识点，如css变量(IE不支持)、transition动画过渡、@font-face加载外部字体文件等css相关知识。</p>
+            <p>代码使用<a href="https://code.visualstudio.com/">Visual Studio Code</a>编写，并用Live Server拓展进行编辑实时预览。</p>
+            <p>目前本网页为交作业用的演示网页，暂未全面完成建设，后续会逐步建设成个人网页。</p>
+            <p>本网页目前暂时不兼容已经过时的IE浏览器，如果使用IE会造成显示上的问题，请使用<a href="https://www.microsoft.com/zh-cn/edge">新版Edge</a>、<a href="https://www.google.cn/chrome">Chrome</a>、<a href="http://www.firefox.com.cn">Firefox</a>等现代浏览器浏览，后续会增加对IE浏览器的支持。</p>
+            <p>作业在线预览地址：<a href="https://timothyou.github.io">https://timothyou.github.io</a></p>
+        </section>
+        <section>
+            <h2>站点目录结构</h2>
+            <p></p>
+            <pre>
+timothyou.github.io
+├index.html     // 主页
+├index          // 主页文件夹
+│├pictures      // 图片文件夹
+││└...
+│└layout.css    // 专有页面布局css
+│
+├creation       // 创作
+│├index.html    // 创作展示页(用index.html的原因是当在地址栏上输入timothyou.github.io/creation时即显示index.html的内容)
+│├pictures      // 图片文件夹
+││└...
+│└layout.css    // 专有页面布局css
+│
+├notes          // 笔记
+│├index.html    // 笔记页
+│├pictures      // 图片文件夹
+││└...
+│└layout.css    // 专有页面布局css
+│
+├something      // 事记
+│├index.html    // 事记汇总页
+│├pictures      // 图片文件夹
+││└...
+│└layout.css    // 专有页面布局css
+│
+├something      // 相册
+│├index.html    // 相册页
+│├pictures      // 图片文件夹
+││├photography-course   // 某个相册的图片文件夹
+│││└...
+││└...
+│├photography-course.html   // 某个相册的网页文件
+│└layout.css    // 专有页面布局css
+│
+├about          // 关于
+│├index.html    // 关于信息页
+│├pictures      // 图片文件夹
+││└...
+│└layout.css    // 专有页面布局css
+│
+└static         // 静态资源文件
+  ├fonts         // 字体文件夹
+  ├picture       // 图片文件夹
+  ├font-face.css // 引入字体用css文件
+  └style.css     // 通用样式css文件
+            </pre>
+        </section>
+        <section>
+            <h2>页面布局</h2>
+            <h3>主页</h3>
+            <img src="./pictures/indexlayout.png" style="width: 400px;"/>
+            <h3>创作/事记/相册</h3>
+            <img src="./pictures/photoslayout.png" style="width: 400px;"/>
+            <h3>笔记</h3>
+            <img src="./pictures/notelayout.png" style="width: 400px;"/>
+            <h3>内容页</h3>
+            <img src="./pictures/contentlayout.png" style="width: 400px;"/>
+        </section>
+        <section>    
+            <h2>建站历程</h2>
+            <p>1. 立项，划分栏目</p>
+            <p>2. 确定设计风格及配色</p>
+            <p>3. 确定各个页面的布局，在纸上画页面草图</p>
+            <p>4. 写页面顶栏、横幅、底栏HTML及css代码</p>
+            <p>5. 分别完成主页、创作合集页、笔记合集页、事记合集页、相册合集页的HTML及css代码</p>
+            <p>6. 给各个页面加入图像</p>
+            <p>7. 完成一个相册页面，并放置相片</p>
+            <p>8. 完成关于页，撰写作业说明</p>
+        </section>   
+        <section>
+            <h2>版权相关</h2>
+            <p>除自己拍摄/绘制图片外，网页中使用图片均为CC协议图片或合理引用版权图片，注释中已标明原出处。</p>
+            <p>中文字体使用思源黑体，西文字体使用FF DIN字体，使用@font-face引用，本作业暂时以非商用方式使用。</p>
+        </section> 
+        <section>  
+            <h2>源代码</h2>
+            <p>源代码地址<a href="https://github.com/TimothyOu/TimothyOu.github.io">https://github.com/TimothyOu/TimothyOu.github.io</a></p>
+            <p>此处展示部分重要源码</p>
+            <h3>主页源码 ./index.html</h3>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;static/style.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;index/layout.css&quot;&gt;
+    &lt;title&gt;TimothyOu&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;header&quot;&gt;
+        &lt;div class=&quot;header-container&quot;&gt;
+            &lt;div class=&quot;logo&quot;&gt;TimothyOu&lt;/div&gt;
+            &lt;ul class=&quot;topnav&quot;&gt;
+                &lt;li class=&quot;focus&quot;&gt;&lt;a href=&quot;#&quot;&gt;主页&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;./creation/&quot;&gt;创作&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;./notes/&quot;&gt;笔记&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;./something/&quot;&gt;事记&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;./photos/&quot;&gt;相册&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;./about/&quot;&gt;关于&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;banner&quot; style=&quot;background-image: url(&#x27;./index/pictures/sea-turquoise-water-seaside_banner.jpg&#x27;)&quot;&gt;
+        &lt;div class=&quot;banner-container&quot;&gt;
+            &lt;div class=&quot;banner-logo&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;search-bar&quot;&gt;
+                &lt;input class=&quot;search-bar-input&quot; type=&quot;text&quot; placeholder=&quot;搜索&quot;/&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content flex&quot;&gt;
+        &lt;div class=&quot;side-content&quot;&gt;
+            &lt;div class=&quot;navbar&quot;&gt;
+                &lt;section&gt;
+                    &lt;div class=&quot;navtitle&quot;&gt;近期事记&lt;/div&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;《网页设计与网站建设》课程完结&lt;/li&gt;
+                        &lt;li&gt;「建筑设计212」进入尾声&lt;/li&gt;
+                        &lt;li&gt;英语四级考试事记&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/section&gt;
+                &lt;section&gt;
+                    &lt;div class=&quot;navtitle&quot;&gt;近期笔记&lt;/div&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;火车票区间限售政策不透明致购票者不满&lt;/li&gt;
+                        &lt;li&gt;抵制无处不在的官僚主义现象&lt;/li&gt;
+                        &lt;li&gt;svg动画广泛应用于网页设计&lt;/li&gt;
+                        &lt;li&gt;Flash已成为历史&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/section&gt;
+            &lt;/div&gt;
+            &lt;a href=&quot;./something/&quot;&gt;&lt;div class=&quot;navbox navbox-events&quot; style=&quot;background-image: url(./creation/pictures/TimothyOu-212.png);&quot;&gt;
+                &lt;div class=&quot;navtitle&quot;&gt;事件&lt;/div&gt;
+                &lt;div class=&quot;navtext&quot;&gt;建筑设计212&lt;/div&gt;
+            &lt;/div&gt;&lt;/a&gt;
+            &lt;a href=&quot;./photos/photography-course.html&quot;&gt;&lt;div class=&quot;navbox navbox-photos&quot; style=&quot;background-image: url(./photos/pictures/photography-course/01\ 花.jpg);&quot;&gt;
+                &lt;div class=&quot;navtitle&quot; style=&quot;color: white;&quot;&gt;相册&lt;/div&gt;
+                &lt;div class=&quot;navtext&quot; style=&quot;color: white;&quot;&gt;摄影选修课作业&lt;/div&gt;
+            &lt;/div&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;main-content&quot;&gt;
+            &lt;section&gt;
+                &lt;h2&gt;关于我&lt;/h2&gt;
+                &lt;img style=&quot;width: 150px; height: 150px; position: absolute; right: 0;&quot; src=&quot;./index/pictures/TimothyOu_Normal_C_x32_whitebg.png&quot;/&gt;
+                &lt;p&gt;你好！我是Timothy，郑州大学建筑学在读，爱好绘画和设计。&lt;/p&gt;
+                &lt;p&gt;常用的卡通设定是一个灰色头发、蓝绿色瞳的普通青年。&lt;/p&gt;
+                &lt;p&gt;平时喜欢听古风音乐、电子音乐和日文歌曲，喜欢看动漫。&lt;/p&gt;
+                &lt;p&gt;常玩的游戏有 Minecraft 和 Fall Guys，对MOBA类游戏不感兴趣。&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section&gt;
+                &lt;h2&gt;大学以来的生活&lt;/h2&gt;
+                &lt;p&gt;大学并不是轻松的。虽然与高中相比多了更多自由的时间，但从某种程度上甚至要比高中还累。&lt;/p&gt;
+                &lt;p&gt;作为一名学建筑的画图人，设计、做模型和画图构成了大学生活的主要部分，设计周熬夜成为大多数学生的常态，再加上健康打卡、青年大学习和各种公修课作业……空闲的时间实在不多。还好我们不学大学物理，高数也只上一个学期就没了。&lt;/p&gt;
+                &lt;p&gt;到了假期还是非常轻松的。我既不用为课程设计肝图，又无需完成并不存在的假期作业，所以有大把的时间做自己喜欢的事情。&lt;/p&gt;
+                &lt;a class=&quot;linkto&quot; href=&quot;something/&quot;&gt;查看更多 →&lt;/a&gt;
+            &lt;/section&gt;
+            &lt;section&gt;
+                &lt;h2&gt;关于这个网页&lt;/h2&gt;
+                &lt;p&gt;这是一个普通的网页，但这个网页又不普通。&lt;/p&gt;
+                &lt;p&gt;这个页面是网页设计选修课的作业，用了课程涉及到的大部分知识点，当然也运用了课程没涉及到的知识。&lt;/p&gt;
+                &lt;p&gt;在选这门课之前我早就掌握了一些HTML和CSS基础知识，设计过几个页面，选这门课纯粹是为了兴趣。&lt;/p&gt;
+                &lt;p&gt;代码全部使用&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;Visual Studio Code&lt;/a&gt;编写。Dreamweaver？不存在的，个人感觉没VScode好用。&lt;/p&gt;
+                &lt;p&gt;作业在线预览地址：&lt;a href=&quot;https://timothyou.github.io&quot;&gt;timothyou.github.io&lt;/a&gt;&lt;/p&gt;
+                &lt;p&gt;该页面目前暂时不兼容已经过时的IE浏览器，如果使用IE会造成显示上的问题，请使用&lt;a href=&quot;https://www.microsoft.com/zh-cn/edge&quot;&gt;新版Edge&lt;/a&gt;、&lt;a href=&quot;https://www.google.cn/chrome&quot;&gt;Chrome&lt;/a&gt;、&lt;a href=&quot;http://www.firefox.com.cn&quot;&gt;Firefox&lt;/a&gt;等现代浏览器浏览。&lt;/p&gt;
+                &lt;p&gt;关于该作业设计的详细信息，可&lt;a class=&quot;linkto&quot; href=&quot;about/&quot;&gt;查看更多 →&lt;/a&gt;&lt;/p&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;bottom&quot;&gt;
+        &lt;div class=&quot;bottom-container&quot;&gt;
+            &lt;div&gt;TimothyOu 的个人主页&lt;/div&gt;
+            &lt;div&gt;欧子钦 202009000318&lt;/div&gt;
+            &lt;div&gt;指导老师: 胡静&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;bottom-info&quot;&gt;
+            &lt;div class=&quot;bottom-info-container&quot;&gt;
+                &lt;span&gt;Email: timothyou@qq.com&lt;/span&gt;
+                &lt;span&gt;bilibili · AcFun · Weibo&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            <h3>通用css ./static/style.css</h3>
+            <pre>
+@import url('./font-face.css');
+
+:root {
+    --main-color: #05826F;
+    --main-color-light:#05907B;
+    --main-color-dark:#11594E;
+    
+    --second-color:#655A57;
+    --second-color-light:#8D807C;
+    --second-color-dark:#463E3C;
+
+    --grey-color:#808080;
+    --grey-light:#A0A0A0;
+    --grey-color-dark:#404040;
+
+    --text-black:#202020;
+    --text-white:#FFFFFF;
+
+    --content-margin: 50px;
+    --border-radius: 2px;
+    --content-width: calc(100% - 100px);
+}
+@media screen and (min-width: 1301px) {
+    :root {
+        --content-width: 1200px;
+    }
+}
+
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--text-black);
+    font-family: 'DIN Pro', 'Source Han Sans';
+    background-color: var(--background);
+    min-width: 800px;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: var(--second-color-dark);
+    color: white;
+}
+.header-container {
+    position: relative;
+    box-sizing:border-box;
+    height: 100%;
+    margin: auto;
+    width: var(--content-width);
+    display: flex;
+    align-items: flex-end;
+}
+.logo {
+    width: 120px;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+.topnav {
+    display: flex;
+    font-size: 16px;
+    padding-bottom: 4px;
+}
+.topnav li a{
+    border-bottom: 2px solid transparent;
+    padding: 4px 8px 3px;
+    color: white;
+    text-decoration: none;
+}
+.topnav li:hover a {
+    background-color: #FFFFFF20;
+}
+.topnav li.focus a {
+    border-bottom: 2px solid var(--second-color-light);
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+.banner-container {
+    position: relative;
+    height: 100%;
+    width: var(--content-width);
+    margin: auto;
+}
+.banner-logo {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    background-image: url('./picture/TO-20211130.png');
+    background-size: cover;
+    background-position: center;
+}
+.banner-title {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    font-size: 50px;
+    font-weight: 500;
+}
+.banner-title-normal {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    font-size: 40px;
+    font-weight: 500;
+}
+.search-bar {
+    width: 250px;
+    height: 35px;
+    background-color: #FFFFFFA0;
+    padding: 0 5px 0;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+.search-bar-input {
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    font-size: 16px;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    color: var(--second-color-dark);
+}
+.search-bar-input::placeholder {
+    color: var(--second-color-light);
+}
+.content {
+    margin: 0 var(--content-margin) 0;
+    min-height: 500px;
+    max-width: var(--content-width);
+    margin: auto;
+}
+.side-content {
+    width: 200px;
+    flex-shrink: 0;
+    padding-top: 20px;
+}
+.navbar {
+    padding: 5px;
+    width: 100%;
+    background-color: #F0F0F0;
+    border-radius: var(--border-radius);
+}
+.navbar ul li{
+    padding: 3px 0;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+.navbar ul li:hover{
+    color: var(--second-color);
+}
+.navbox {
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+    margin: 10px 0;
+    width: 100%;
+    height: 125px;
+    background-color: #F0F0F0;
+    border-radius: var(--border-radius);
+    background-size: cover;
+    background-position: center;
+}
+.navtitle{
+    font-weight: bold;
+}
+.navtext{
+    position: absolute;
+    bottom: 5px;
+    font-size: 14px;
+}
+.main-content {
+    padding-left: 40px;
+}
+
+.card-container {
+    flex-wrap: wrap;
+}
+.card {
+    width: 200px;
+    height: 200px;
+    margin: 0 20px 0;
+    color: var(--text-black);
+}
+.card img{
+    border-radius: var(--border-radius);
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.textcard{
+    border-radius: var(--border-radius);
+    background-color: #F0F0F0;
+}
+.textcard h3{
+    color: var(--second-color-dark);
+}
+.textcard p{
+    color: var(--second-color);
+}
+
+
+
+.bottom {
+    width: 100%;
+    height: 100px;
+    background-color: var(--second-color);
+    color: white;
+    font-weight: 300;
+}
+.bottom-container {
+    padding-top: 5px;
+    position: relative;
+    height: 80px;
+    width: var(--content-width);
+    margin: auto;
+}
+.bottom-info {
+    width: 100%;
+    height: 20px;
+    background-color: var(--second-color-dark);
+
+}
+.bottom-info-container {
+    position: relative;
+    height: 100%;
+    width: var(--content-width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.content a {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+.content a.linkto {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: color 0.3s;
+}
+.flex {
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+input {
+    font-family: 'DIN Pro', 'Source Han Sans';
+}
+section {
+    position: relative;
+}
+pre {
+    width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+            </pre>
+        </section>
+    </div>
+    <div class="bottom">
+        <div class="bottom-container">
+            <div>TimothyOu 的个人主页</div>
+            <div>欧子钦 202009000318</div>
+            <div>指导老师: 胡静</div>
+        </div>
+        <div class="bottom-info">
+            <div class="bottom-info-container">
+                <span>Email: timothyou@qq.com</span>
+                <span>bilibili · AcFun · Weibo</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

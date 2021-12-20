@@ -1,0 +1,7 @@
+.banner {
+    background-image: url('./pictures/sea-turquoise-water-seaside_banner.jpg');;
+    /* https://www.hippopx.com/zh/sea-turquoise-water-seaside-mediterranean-turquoise-water-236509 */
+}
+.banner-title, .banner-title-normal {
+    color: white;
+}
